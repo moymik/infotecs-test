@@ -35,6 +35,7 @@ export const fetchUsers = async ({
     try {
         response = await fetch(`${baseUrl}?${params.toString()}`);
     } catch (error) {
+        console.error(error);
         throw new Error('Ошибка сети. Проверьте ваше интернет-соединение.');
     }
 
